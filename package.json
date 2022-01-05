@@ -1,11 +1,15 @@
 {
   "name": "nextjs_deploy",
   "private": true,
+  "homepage": "http://iamhwang.github.io/next_deploy",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "next": "12.0.7",
@@ -17,6 +21,7 @@
     "@types/react": "17.0.38",
     "eslint": "8.6.0",
     "eslint-config-next": "12.0.7",
+    "gh-pages": "^3.2.3",
     "typescript": "4.5.4"
   }
 }
